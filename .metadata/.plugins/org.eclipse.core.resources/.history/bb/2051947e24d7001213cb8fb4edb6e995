@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+
+public class BinaryTree 
+{
+	ArrayList<Node> tree;
+	
+	public BinaryTree()
+	{
+		tree = new ArrayList<Node>();
+	}
+
+}

@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+
+public class Node 
+{
+	private int weight;
+	private String string;
+	private ArrayList<Node> children;
+	
+	public Node(String s)
+	{
+		string = s;
+	}
+	
+	//Weight is equal to the length of the current string plus the weight of the left subtree
+	public void addChild(Node n)
+	{
+		string = s;
+		weight = string.length();
+	}
+}

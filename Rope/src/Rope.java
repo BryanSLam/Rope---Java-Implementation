@@ -9,5 +9,9 @@
 //Operations include index, split, concat, insert, delete, report
 public class Rope 
 {
+	public Rope()
+	{
+		
+	}
 	
 }

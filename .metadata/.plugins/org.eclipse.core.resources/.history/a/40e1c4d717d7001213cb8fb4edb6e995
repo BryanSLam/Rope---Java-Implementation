@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+
+public class Node 
+{
+	private int weight;
+	private String string;
+	private ArrayList<Node> children;
+	
+	public Node(String s)
+	{
+		string = s;
+	}
+	
+	public void addChild(Node n)
+	{
+		
+	}
+}
