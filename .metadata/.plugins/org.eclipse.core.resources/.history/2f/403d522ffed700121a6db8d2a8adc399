@@ -1,8 +1,4 @@
-//Holds methods specific to when you have access to a certain node and not searching through
-//the rope for a specific node
 
-//Confused deciding whether or not getWeight should stay in Node or in Rope like how I put
-//the non recursive method of index in rope.
 
 public class Node 
 {
@@ -29,7 +25,7 @@ public class Node
 	//the nodes in it's right subtree
 	
 	//Recursive method
-	private int weight(Node n)
+	public int weight(Node n)
 	{
 		if(n.getRight() == null)
 		{
@@ -49,7 +45,21 @@ public class Node
 		return weight(this.leftNode);
 	}
 	
-
+	//Index returns the character at position i
+	//Runs in O(log n) n being the length of the rope
+	
+	//Given the position of the character i, start at the root, given the weight of a node.
+	//If the weight is greater than or equal to i and a left child exists, go to the left child.
+	//If the weight is greater than or equal to i and no left child exists, return the node's string
+	//at character position i
+	//If the weight is less than the given i then subtract the weight from i (i = i-weight) and go
+	//to the right child
+	
+	//recursive method
+	public char index(int i)
+	{
+		return null;
+	}
 	
 	
 	

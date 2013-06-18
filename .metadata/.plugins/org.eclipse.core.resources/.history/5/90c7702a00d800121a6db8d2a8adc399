@@ -25,8 +25,7 @@ public class Rope
 	//If the weight is less than the given i then subtract the weight from i (i = i-weight) and go
 	//to the right child
 	
-	//recursive method, private because the non-recursive method should be the one starting the call
-	
+	//recursive method, private because only the nonrecursive method should call it once
 	private char index(int i, Node n)
 	{
 		//Only call the recursive method to get weight once, recursion kills performance
@@ -35,17 +34,6 @@ public class Rope
 		{
 			i = i-weight;
 			return index(i, n.getRight());
-		}
-		else
-		{
-			if(n.getLeft() != null)
-			{
-				return index(i, n.getLeft());
-			}
-			else
-			{
-				return (n.getString().charAt(i));
-			}
 		}
 	}
 	
