@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Node 
 {
+	private int weight;
 	private String string;
 	private Node leftNode;
 	private Node rightNode;
@@ -10,6 +11,7 @@ public class Node
 	public Node(String s)
 	{
 		string = s;
+		weight = string.length();
 	}
 	
 	
@@ -25,25 +27,14 @@ public class Node
 	//To calculate the weight, get the weight of the node's left child and the weight of all
 	//the nodes in it's right subtree
 	
-	//Recursive method
-	private int weight(Node n)
+	//If the node is a leaf then return the length of the
+	public int getWeight(Node n)
 	{
 		if(n.getRight() == null)
 		{
-			return n.getString().length();
+			return n.string.length();
 		}
-		return n.getString().length() + weight(n.getRight());
-	}
-	
-	//To get the weight you have to call the getWeight starting with the first node on the left subtree
-	public int getWeight()
-	{
-		//If there's no left subtree, return the length of the string
-		if(this.leftNode == null)
-		{
-			return string.length();
-		}
-		return weight(this.leftNode);
+		return n.string.length() + getWeight(n.getRight());
 	}
 	
 	public Node getLeft()

@@ -30,16 +30,16 @@ public class Node
 	{
 		if(n.getRight() == null)
 		{
-			return n.getString().length();
+			return 0;
 		}
-		return n.getString().length() + weight(n.getRight());
+		return n.getRight().getString().length() + weight(n.getRight());
 	}
 	
 	//To get the weight you have to call the getWeight starting with the first node on the left subtree
 	public int getWeight()
 	{
 		//If there's no left subtree, return the length of the string
-		if(this.leftNode == null)
+		if(this.leftNode = null)
 		{
 			return string.length();
 		}

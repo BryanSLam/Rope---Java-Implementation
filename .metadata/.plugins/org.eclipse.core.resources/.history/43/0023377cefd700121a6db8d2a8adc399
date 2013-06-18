@@ -26,26 +26,20 @@ public class Node
 	//the nodes in it's right subtree
 	
 	//Recursive method
-	private int weight(Node n)
+	public int getWeight(Node n)
 	{
 		if(n.getRight() == null)
 		{
-			return n.getString().length();
+			return 0;
 		}
-		return n.getString().length() + weight(n.getRight());
+		return n.getRight().getString().length() + getWeight(n.getRight());
 	}
 	
-	//To get the weight you have to call the getWeight starting with the first node on the left subtree
-	public int getWeight()
+	//To get the weight you have to call the getweight starting with the first node on the left subtree
+	public int weight()
 	{
-		//If there's no left subtree, return the length of the string
-		if(this.leftNode == null)
-		{
-			return string.length();
-		}
-		return weight(this.leftNode);
+		return getWeight(this.leftNode);
 	}
-	
 	public Node getLeft()
 	{
 		return leftNode;
