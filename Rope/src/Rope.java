@@ -49,6 +49,9 @@ public class Rope
 		}
 	}
 	
+	//Split: (i,s) splits s into two new strings s1 and s2, s1 = c1...ci, s2=ci+1...clast
+	
+	
 	//Call the recursive method starting at the root with i
 	
 	//I seperate the recursive method from the method I want users to use to allow for easier 
